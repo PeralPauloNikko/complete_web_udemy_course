@@ -1,45 +1,58 @@
-<!DOCTYPE html>
+
 <html>
+
     <head>
+        
         <title>Javascript</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
     </head>
-    
+
     <body>
-        <p id="text">Hello World!</p>       
+        
+        <p id="text">Hello World!</p>
         
         <button id="myButton">Change text</button>
         
-        <p id="secondParagraph">Javascript is...</p>
+        <p id="secondParagraph">Javascript is ... </p>
         
-                <button id="secondButton">Append text</button>
-
-                <p id="emptyParagraph"></p>
-                
-                <button id="createParagraph">Create Text</button>
-                
+        <button id="secondButton">Append text</button>
+        
+        <p id="emptyParagraph"></p>
+        
+        <button id="createParagraph">Create text</button>
+        
+        <p id="moreText">This is some text</p>
+        
+        <button id="styleText">Style Text</button>
+        
         <script type="text/javascript">
-//document gets the document in this document
-//. onclick activates the click function
-
-
-   document.getElementById("myButton").onclick = function() {
-document.getElementById("text").innerHTML = "Hello Rob!";
-   }
-   
-   
-document.getElementById("secondButton").onclick = function(){
-    document.getElementById("secondParagraph").innerHTML = 
-            "I think " + document.getElementById("secondParagraph").innerHTML + "awesome!";
-
-   }
-   document.getElementById("createParagraph").onclick = function() {
-    
-   document.getElementById("emptyParagraph").innerHTML = "Hi There!";
-   }
-   
+            
+            document.getElementById("myButton").onclick = function() {
+                
+                document.getElementById("text").innerHTML = "Hello Rob!";
+                
+            }
+            
+            document.getElementById("secondButton").onclick = function() {
+                
+                document.getElementById("secondParagraph").innerHTML = "I think " + document.getElementById("secondParagraph").innerHTML + "awesome!";
+                
+            }
+            
+            document.getElementById("createParagraph").onclick = function() {
+                
+                
+                document.getElementById("emptyParagraph").innerHTML = "<h1>Hi there!</h1>";
+                
+            }
+            
+            document.getElementById("styleText").onclick = function() {
+                document.getElementById("moreText").style.color = "red";
+            }
+            
+       
         </script>
         
     </body>
+
 </html>
