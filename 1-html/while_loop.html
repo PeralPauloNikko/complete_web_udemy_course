@@ -1,0 +1,59 @@
+
+<html>
+
+    <head>
+        
+        <title>Javascript</title>
+        
+    </head>
+
+    <body>
+        <p>How many fingers are you holding up?</p>
+        <p>
+            <select id="myNumber">
+    <option>0</option>
+        <option>1</option>
+            <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+            </select>
+        
+            <button id="guess">Guess!</button>
+        </p>
+<script type="text/javascript">
+
+document.getElementById("guess").onclick = function() {
+    
+    var myNumber = document.getElementById("myNumber").value;
+    //the computer guesses what number it is
+    var gotIt = false;
+    var numberOfGuesses = 1;
+    
+        while (gotIt == false) {
+        
+    var guess = Math.random();
+    //then it will multiply it's guess by 6
+    guess = guess * 6;
+    //then it 
+    guess = Math.floor(guess);
+
+    if(guess == myNumber) {
+        //Computer is correct
+        gotIt = true;
+        alert("Got it! It was a " + guess + ". It tooke me " + numberOfGuesses + " guesses.");
+    }else {
+        //computer is wrong
+        numberOfGuesses++;
+    }
+}
+}
+</script>
+        
+
+    </body>
+
+</html>
